@@ -11,6 +11,7 @@
 
     <modules>
         <module>cloud-provider-payment8001</module>
+        <module>cloud-consumer-order80</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
@@ -89,7 +90,8 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
+<!--    <build>
+        <finalName>cloud-provider-payment8001</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -100,5 +102,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
