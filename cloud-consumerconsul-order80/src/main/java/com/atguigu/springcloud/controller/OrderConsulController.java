@@ -22,7 +22,7 @@ public class OrderConsulController {
     private RestTemplate restTemplate;
 
     @GetMapping(value = "/consumer/payment/consul")
-    public String paymentInfo(){
+    public String paymentInfo() {
         return restTemplate.getForObject(INVOKE_URL + "/payment/consul", String.class);
     }
 }
