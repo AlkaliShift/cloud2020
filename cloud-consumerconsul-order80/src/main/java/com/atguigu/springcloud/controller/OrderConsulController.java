@@ -10,19 +10,19 @@ import javax.annotation.Resource;
 /**
  * @author shenghui
  * @version 1.0
- * @since 2020/7/29 09:30
+ * @since 2020/8/17 14:17
  */
 @RestController
 @Slf4j
-public class OrderZkController {
+public class OrderConsulController {
 
-    public static final String INVOKE_URL = "http://cloud-provider-payment";
+    public static final String INVOKE_URL = "http://consul-provider-payment";
 
     @Resource
     private RestTemplate restTemplate;
 
-    @GetMapping(value = "/consumer/payment/zk")
+    @GetMapping(value = "/consumer/payment/consul")
     public String paymentInfo() {
-        return restTemplate.getForObject(INVOKE_URL + "/payment/zk", String.class);
+        return restTemplate.getForObject(INVOKE_URL + "/payment/consul", String.class);
     }
 }

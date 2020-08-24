@@ -10,7 +10,7 @@ import java.util.UUID;
 /**
  * @author shenghui
  * @version 1.0
- * @since 2020/7/27 16:16
+ * @since 2020/8/17 13:46
  */
 @RestController
 @Slf4j
@@ -19,8 +19,8 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
-    @GetMapping(value = "/payment/zk")
-    public String paymentzk() {
-        return "Springcloud with zookeeper: " + serverPort + "\t" + UUID.randomUUID().toString();
+    @GetMapping(value = "/payment/consul")
+    public String paymentConsul() {
+        return "Springcloud with consul: " + serverPort + "\t" + UUID.randomUUID().toString();
     }
 }
