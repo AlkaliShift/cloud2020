@@ -59,9 +59,9 @@ public class OrderController {
     }
 
     @GetMapping("/consumer/payment/lb")
-    public String getPaymentLB(){
+    public String getPaymentLB() {
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        if (instances == null || instances.size() <= 0){
+        if (instances == null || instances.size() <= 0) {
             return null;
         }
 
